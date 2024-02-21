@@ -18,7 +18,18 @@
         <li class="list__item">Travail</li>
         <li class="list__item">Etc.</li>
       </ul>
-      <button class="btn btn--add">ajouter</button>
+      <form class="form">
+        <fieldset class="form__fieldset">
+          <label>A faire</label>
+          <input
+            type="text"
+            class="input__txt"
+            id="todoTxt"
+            placeholder="Ex: manger"
+          />
+        </fieldset>
+        <input type="submit" value="ajouter" class="btn btn--primary submit" />
+      </form>
     </main>
   </body>
 </html>

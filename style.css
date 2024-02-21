@@ -2,6 +2,8 @@
   --color-primary: #333333;
   --color-white: #f1f1f1;
   --color-grey: #dedede;
+
+  --dimen-flex-gap: 1rem;
 }
 
 *,
@@ -31,9 +33,47 @@ body {
   left: 50%;
   transform: translate(-50%, 50%);
 }
-.btn--add {
-  position: absolute;
+
+.btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form {
+  margin: 1.6rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--dimen-flex-gap);
+}
+
+.form__fieldset {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  gap: var(--dimen-flex-gap);
+  flex-grow: 0.9;
+}
+
+.input__txt {
+  all: unset;
+  border: 0.175rem solid var(--color-primary);
+  border-radius: 0.5rem;
+  padding: 0.85rem 1.5rem;
+}
+
+.submit {
+  align-self: end;
 }
